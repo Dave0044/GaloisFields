@@ -1,0 +1,47 @@
+{% extends "gf2m/layout.html" %}
+
+
+{% block body %}
+
+<h2>Addition in \(GF(2^m)\)</h2>
+
+    <p>
+        The elemnts addition of \(GF(2^m)\) corresponds to a simple bitwise \(XOR\)
+        operation of two \(m\)-bit vectors. 
+    </p>
+    <!-- Example -->
+    <p><b>Example:</b> \(a(z) = z^7 + z^3 + 1\) and \(b(z) = z^{13} + z^4 + z^2\), then \(a(z) + b(z) \equiv z^{13} + z^7 + z^4 + z^3 + z^2 + 1\)</p>
+    
+    <p><i>Binary expression of \(a(z)\): 10001001, decimal expression of \(a(z)\): 137</i></p>
+
+    <p><i>Binary expression of \(b(z)\): 10000000010100, decimal expression of \(b(z)\): 8212</i></p>
+
+    <p><i>Binary expression of \(a(z) + b(z)\): 10000010011101, decimal expression of \(a(z) + b(z)\): 8349</i></p>
+
+    <form method="post" action="{% url 'gf2m:addition' %}">
+        {% csrf_token %}
+        <label for="num1"> Binary polynomial in decimal 1 :</label>
+        <input type="text" name="num1" required>
+        <br>
+        <label for="num2"> Binary polynomial in decimal 2 :</label>
+        <input type="text" name="num2" required>
+        <br>
+        <input type="submit" value="Addition">
+    </form>
+    
+    {% if resultado %}
+        <p>Resultado: {{ resultado }}</p>
+    {% endif %}
+
+    <ul>
+        <a href="{% url 'gf2m:multiplication' %}">Multiplication in \(GF(2^m)\)</a><br>
+        <a href="{% url 'gf2m:division' %}">Division in \(GF(2^m)\)</a>
+    </ul>
+
+
+
+    <a href="{% url 'gf2m:start' %}">Galois Fields</a><br>
+    <a href="{% url 'gf2m:index' %}">Operations in \(GF(2)\)</a><br>
+    <a href="{% url 'gf2m:add' %}">Operations in \(GF(2^m)\)</a><br>
+    <a href="{% url 'gf2m:polyoperations' %}">Operations in \(GF((2^m)^t)\)</a>
+{% endblock %}

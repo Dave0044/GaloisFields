@@ -1,0 +1,79 @@
+/* Reset de estilos básicos para mejorar la consistencia entre navegadores */
+h1, h2, h3, h4, ul, li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+/* Estilo básico para el cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 5%;
+}
+
+/* Estilo para la cabecera (header) */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilo para la barra de navegación (navbar) */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Estilo para el contenido principal */
+main {
+    padding: 20px;
+}
+
+/* Estilo para el pie de página (footer) */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+}
+
+/* Estilo para enlaces */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+    

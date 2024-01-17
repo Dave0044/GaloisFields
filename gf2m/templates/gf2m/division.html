@@ -1,0 +1,38 @@
+{% extends "gf2m/layout.html" %}
+
+
+{% block body %}
+
+<h2>Division in \(GF(2^m)\)</h2>
+<p>The division of two elements \(a(z)\) and \(b(z)\) involves multiplying \(a(z)\) by the multiplicative inverse of \(b(z)\).</p>
+<p><b>Example:</b> \(a(z) = z^7 + z^3 + 1\) and \(b(z) = z^{13} + z^4 + z^2\), then
+    \(\frac{a(z)}{b(z)} \equiv a(z) \cdot (b(z))^{-1} \pmod{f(z)}\). Finding the inverse of \(b(z)\): \(b(z)^{-1} \equiv z^{11} + z^{10} + z^8 + z^7 + z^5 + z^4 + z^3 + z^2 + 1\). Multiplying and reducing by \(f(z),\) the result is:</p>
+    <p>\(\frac{a(z)}{b(z)} \equiv z^2 + z + 1\)</p>
+
+
+    <form method="post" action="{% url 'gf2m:division' %}">
+        {% csrf_token %}
+        <label for="num1"> Binary polynomial in decimal 1 :</label>
+        <input type="text" name="num1" required>
+        <br>
+        <label for="num2"> Binary polynomial in decimal 2 :</label>
+        <input type="text" name="num2" required>
+        <br>
+        <input type="submit" value="Division">
+    </form>
+    
+    {% if resultado %}
+        <p>Resultado: {{ resultado }}</p>
+    {% endif %}
+
+    <ul>
+        <a href="{% url 'gf2m:addition' %}">Addition in \(GF(2^m)\)</a><br>
+        <a href="{% url 'gf2m:multiplication' %}">Multiplication in \(GF(2^m)\)</a>
+    </ul>
+
+
+    <a href="{% url 'gf2m:start' %}">Galois Fields</a><br>
+    <a href="{% url 'gf2m:index' %}">Operations in \(GF(2)\)</a><br>
+    <a href="{% url 'gf2m:add' %}">Operations in \(GF(2^m)\)</a><br>
+    <a href="{% url 'gf2m:polyoperations' %}">Operations in \(GF((2^m)^t)\)</a>
+{% endblock %}

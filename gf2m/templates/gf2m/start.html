@@ -1,0 +1,25 @@
+{% extends "gf2m/layout.html" %}
+
+
+{% block body %}
+
+
+<h1 style="font-size: 40px;">Galois Field Operations</h1>
+
+
+    <p style="font-size: 20px;"><b>Galois Fields:</b></p>
+    <p>Galois Fields are important algebraic structures in number theory and abstract algebra. They are related to field theory and find applications in cryptography and error-correction codes.</p>
+
+    <p>A Galois Field is a special type of finite field, where the number of elements in the field is a power of a prime number. Galois theory provides tools for studying the roots of polynomials and solving algebraic equations.</p>
+
+    <p>Galois Fields are fundamental in constructing field extensions and in solving classically unsolvable problems by radicals. Galois theory was developed by Évariste Galois in the 19th century and has had a significant impact on various areas of mathematics.</p>
+
+    <p>Exploring Galois Fields involves understanding their properties, extensions, and applications in different mathematical and computational contexts.</p>
+
+<a href="{% url 'gf2m:index' %}">Operations in \(GF(2)\)</a><br>
+<a href="{% url 'gf2m:add' %}">Operations in \(GF(2^m)\)</a><br>
+<a href="{% url 'gf2m:polyoperations' %}">Operations in \(GF((2^m)^t)\)</a>
+
+
+
+{% endblock %}

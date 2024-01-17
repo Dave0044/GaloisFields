@@ -1,0 +1,68 @@
+{% extends "gf2m/layout.html" %}
+
+{% block body %}
+    <h2>Operations in \(GF(2)\)</h2>
+    <p>\(GF(2)=\{0,1\}\) refers to the finite field with two elements: 0 and 1. It is also known as the binary field or the Galois field with two elements. In this field, the operations of addition and multiplication are equivalent to \(XOR\) (exclusive \(OR\)) and logical \(AND\) operations, respectively. Here are the basic operations in \(GF(2)\):</p>
+    
+    <table>
+        <tr>
+            <th>a</th>
+            <th>b</th>
+            <th>a + b</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <caption>\(GF(2)\) Addition Table</caption>
+    </table>
+    <table>
+        <tr>
+            <th>a</th>
+            <th>b</th>
+            <th>a * b</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <caption>\(GF(2)\) Multiplication Table</caption>
+    </table>
+
+    <a href="{% url 'gf2m:start' %}">Galois Fields</a><br>
+    <a href="{% url 'gf2m:add' %}">Operations in \(GF(2^m)\)</a><br>
+    <a href="{% url 'gf2m:polyoperations' %}">Operations in \(GF((2^m)^t)\)</a>
+
+{% endblock%}
