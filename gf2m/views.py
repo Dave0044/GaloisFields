@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import ctypes
 from ctypes import CDLL, c_int
+from django.http import JsonResponse
 
 # Create your views here.
 def start(request):
@@ -20,7 +21,7 @@ def addition(request):
         
         resultado = gf.gf_add(c_int(num1), c_int(num2))
         
-        return render(request, 'gf2m/addition.html', {'resultado': resultado})
+        return JsonResponse({'resultado': resultado})
     return render(request, 'gf2m/addition.html')
 
 def multiplication(request):
@@ -31,7 +32,7 @@ def multiplication(request):
         
         resultado = gf.gf_mul(c_int(num1), c_int(num2))
         
-        return render(request, 'gf2m/multiplication.html', {'resultado': resultado})
+        return JsonResponse({'resultado': resultado})
     return render(request, 'gf2m/multiplication.html')
 
 def division(request):
@@ -42,7 +43,7 @@ def division(request):
         
         resultado = gf.gf_frac(c_int(num1), c_int(num2))
         
-        return render(request, 'gf2m/division.html', {'resultado': resultado})
+        return JsonResponse({'resultado': resultado})
     return render(request, 'gf2m/division.html')
 
 def polyoperations(request):

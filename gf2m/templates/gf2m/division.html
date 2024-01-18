@@ -18,12 +18,14 @@
         <label for="num2"> Binary polynomial in decimal 2 :</label>
         <input type="text" name="num2" required>
         <br>
-        <input type="submit" value="Division">
+        <button type="submit">Division</button>
     </form>
     
-    {% if resultado %}
-        <p>Resultado: {{ resultado }}</p>
-    {% endif %}
+    <div id="resultado">
+        {% if resultado %}
+            <p>Resultado: {{ resultado }}</p>
+        {% endif %}
+    </div>
 
     <ul>
         <a href="{% url 'gf2m:addition' %}">Addition in \(GF(2^m)\)</a><br>
