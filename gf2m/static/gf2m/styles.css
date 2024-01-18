@@ -77,3 +77,49 @@ th {
     background-color: #f2f2f2;
 }
     
+form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #cee9f6;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(12, 152, 234, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 16px;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #5ed6f4;
+    border: 1px solid #0f93eb;
+    border-radius: 5px;
+}
+
+#resultado p {
+    margin: 0;
+    font-size: 18px;
+    color: #2c3e50;
+}
