@@ -41,12 +41,14 @@
         The number of elements in \(GF(2^m)\) is \(2^m\), as each coefficient of a polynomial can be 0 or 1, and there are \(m\) coefficients in total.
     </p>
 
+    <h2>Calculation of operations in \( GF(2^{13}) \cong \frac{GF(2)}{x^{13}+x^4+x^3+x+1}\)</h2>
+    <p>Next we perform addition, multiplication and division operations in \( GF(2^{13}) \cong \frac{GF(2)}{x^{13}+x^4+x^3+x+1}\). These operations, called from Python, are optimized and written in C code.</p>
     <ul>
         <a href="{% url 'gf2m:addition' %}">Addition in \(GF(2^m)\)</a><br>
         <a href="{% url 'gf2m:multiplication' %}">Multiplication in \(GF(2^m)\)</a><br>
         <a href="{% url 'gf2m:division' %}">Division in \(GF(2^m)\)</a>
     </ul>
-    
+ 
 
 
     <a href="{% url 'gf2m:start' %}">Galois Fields</a><br>

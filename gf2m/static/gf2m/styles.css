@@ -125,3 +125,38 @@ button:hover {
     font-size: 18px;
     color: #2c3e50;
 }
+
+
+
+/* styles.css */
+
+/* Estilos para el bloque de código */
+pre {
+    background-color: #cee9f6b0; /* Fondo oscuro */
+    border: 1px solid #4fb1f3;
+    color: #090707; /* Texto gris claro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow-x: auto; /* Barras de desplazamiento horizontal si es necesario */
+}
+
+code {
+    font-family: 'Courier New', monospace; /* Fuente monoespaciada */
+    font-size: 14px; /* Tamaño de fuente */
+    white-space: pre-wrap; /* Romper líneas si es necesario */
+}
+
+/* Resaltado de sintaxis básico */
+.keyword {
+    color: #569cd6; /* Color para palabras clave como "typedef", "#define", etc. */
+}
+
+.identifier {
+    color: #9cdcfe; /* Color para identificadores como "gf", "gf_add", etc. */
+}
+
+.comment {
+    color: #6a9955; /* Color para comentarios */
+}
+
+/* Más estilos pueden agregarse según sea necesario */

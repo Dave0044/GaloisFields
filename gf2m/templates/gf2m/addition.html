@@ -5,7 +5,7 @@
 <h2>Addition in \(GF(2^m)\)</h2>
 
     <p>
-        The elemnts addition of \(GF(2^m)\) corresponds to a simple bitwise \(XOR\)
+        The elements addition of \(GF(2^m)\) corresponds to a simple bitwise \(XOR\)
         operation of two \(m\)-bit vectors. 
     </p>
     <!-- Example -->
@@ -35,7 +35,23 @@
         <a href="{% url 'gf2m:multiplication' %}">Multiplication in \(GF(2^m)\)</a><br>
         <a href="{% url 'gf2m:division' %}">Division in \(GF(2^m)\)</a>
     </ul>
+    
+    <p>Explore below the C code called from Python, which is used for the operation of addition of two elements in \(GF(2^m)\):</p>
 
+    <pre class="language-c">
+        <code>
+            #include &lt;stdio.h&gt;
+            #include &lt;stdint.h&gt;
+            
+            typedef uint16_t gf;
+            #define GFBITS 13
+
+            gf gf_add(gf in0, gf in1){
+                return in0 ^ in1;
+            }
+        </code>
+    </pre>
+    
 
 
     <a href="{% url 'gf2m:start' %}">Galois Fields</a><br>

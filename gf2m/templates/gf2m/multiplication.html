@@ -21,16 +21,50 @@
     </form>
     
     <div id="resultado">
-        {% if resultado %}
-            <p>Resultado: {{ resultado }}</p>
-        {% endif %}
+        <p>Result: {% if resultado is not None %}{{ resultado }}{% else %}{% endif %}</p>
     </div>
 
     <ul>
         <a href="{% url 'gf2m:addition' %}">Addition in \(GF(2^m)\)</a><br>
         <a href="{% url 'gf2m:division' %}">Division in \(GF(2^m)\)</a>
     </ul>
+    <p>Explore below the C code called from Python, which is used for the operation of multiplication of two elements in \(GF(2^m)\):</p>
 
+    <pre class="language-c">
+        <code>
+            #include &lt;stdio.h&gt;
+            #include &lt;stdint.h&gt;
+            
+            typedef uint16_t gf;
+            #define GFBITS 13
+
+            gf gf_mul(gf in0, gf in1){
+	            int i;
+
+	            uint64_t tmp;
+	            uint64_t t0;
+	            uint64_t t1;
+	            uint64_t t;
+
+	            t0 = in0;
+	            t1 = in1;
+
+	            tmp = t0 * (t1 & 1);
+
+	            for (i = 1; i < GFBITS; i++)
+    		    tmp ^= (t0 * (t1 & (1 << i)));
+
+	            /* module reduction */
+	            t = tmp & 0x1FF0000;
+	            tmp ^= (t >> 9) ^ (t >> 10) ^ (t >> 12) ^ (t >> 13);
+
+	            t = tmp & 0x000E000;
+	            tmp ^= (t >> 9) ^ (t >> 10) ^ (t >> 12) ^ (t >> 13);
+
+	            return tmp & GFMASK;
+            }
+        </code>
+    </pre>
 
     <a href="{% url 'gf2m:start' %}">Galois Fields</a><br>
     <a href="{% url 'gf2m:index' %}">Operations in \(GF(2)\)</a><br>
