@@ -80,9 +80,10 @@ th {
 form {
     margin: 20px;
     padding: 20px;
-    background-color: #cee9f6;
+    background-color: #cee9f6b0;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(12, 152, 234, 0.1);
+    border: 1px solid #4fb1f3;
 }
 
 label {
@@ -99,7 +100,7 @@ input {
 
 button {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #3a4e5b6d;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -113,8 +114,8 @@ button:hover {
 #resultado {
     margin-top: 20px;
     padding: 20px;
-    background-color: #5ed6f4;
-    border: 1px solid #0f93eb;
+    background-color: #cee9f6b0;
+    border: 1px solid #4fb1f3;
     border-radius: 5px;
 }
 
