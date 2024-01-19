@@ -29,9 +29,7 @@
     </form>
     
     <div id="resultado">
-        {% if resultado %}
-            <p>Resultado: {{ resultado }}</p>
-        {% endif %}
+        <p>Result: {% if resultado is not None %}{{ resultado }}{% else %}{% endif %}</p>
     </div>
     <ul>
         <a href="{% url 'gf2m:multiplication' %}">Multiplication in \(GF(2^m)\)</a><br>

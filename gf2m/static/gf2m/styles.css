@@ -112,7 +112,8 @@ button:hover {
 }
 
 #resultado {
-    margin-top: 20px;
+    margin-top: 5px;
+    margin: 50px;
     padding: 20px;
     background-color: #cee9f6b0;
     border: 1px solid #4fb1f3;
