@@ -4,6 +4,9 @@ h1, h2, h3, h4, ul, li {
     padding: 0;
     text-align: center;
 }
+hr {
+border: 1px solid black;
+}
 
 
 /* Estilo básico para el cuerpo de la página */
@@ -51,14 +54,6 @@ footer {
 }
 
 /* Estilo para enlaces */
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
 
 
 table {
@@ -160,3 +155,38 @@ code {
 }
 
 /* Más estilos pueden agregarse según sea necesario */
+
+.link-container {
+    text-align: center; /* Alinea los enlaces al centro */
+}
+
+.link-container ul {
+    list-style: none; /* Elimina los puntos de la lista predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+.link-container li {
+    display: inline-block; /* Hace que los elementos de lista aparezcan en la misma línea */
+    margin-right: 20px; /* Espacio entre los elementos de lista (enlaces) */
+}
+
+
+.link {
+    display: inline-block;
+    margin: 0 10; /* No es necesario con el cambio de padding */
+    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border: 1px solid #0c6cb5;
+}
+
+
+  /* Cambia el color de fondo cuando el mouse está sobre el enlace */
+.link:hover {
+    background-color: #2980b9;
+}

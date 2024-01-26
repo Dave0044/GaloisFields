@@ -24,10 +24,12 @@
         <p>Result: {% if resultado is not None %}{{ resultado }}{% else %}{% endif %}</p>
     </div>
 
-    <ul>
-        <a href="{% url 'gf2m:addition' %}">Addition in \(GF(2^m)\)</a><br>
-        <a href="{% url 'gf2m:division' %}">Division in \(GF(2^m)\)</a>
-    </ul>
+    <div class="link-container">
+        <ul>
+            <li><a href="{% url 'gf2m:addition' %}" class="link">Addition in \(GF(2^m)\)</a></li>
+            <li><a href="{% url 'gf2m:division' %}" class="link">Division in \(GF(2^m)\)</a></li>
+        </ul>
+    </div>
     <p>Explore below the C code called from Python, which is used for the operation of multiplication of two elements in \(GF(2^m)\):</p>
 
     <pre class="language-c">
@@ -65,9 +67,11 @@
             }
         </code>
     </pre>
-
-    <a href="{% url 'gf2m:start' %}">Galois Fields</a><br>
-    <a href="{% url 'gf2m:index' %}">Operations in \(GF(2)\)</a><br>
-    <a href="{% url 'gf2m:add' %}">Operations in \(GF(2^m)\)</a><br>
-    <a href="{% url 'gf2m:polyoperations' %}">Operations in \(GF((2^m)^t)\)</a>
+    <hr>
+    <a href="{% url 'gf2m:start' %}" class="link">Galois Fields</a><br>
+    <a href="{% url 'gf2m:index' %}" class="link">Operations in \(GF(2)\)</a><br>
+    <a href="{% url 'gf2m:add' %}" class="link">Operations in \(GF(2^m)\)</a><br>
+    <a href="{% url 'gf2m:polyoperations' %}" class="link">Operations in \(GF((2^m)^t)\)</a><br>
+    <hr>
+    
 {% endblock %}
